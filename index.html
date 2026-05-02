@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 <!--
 	Read Only by HTML5 UP
@@ -139,4 +140,147 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+=======
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Diplomové práce | Využití RQA pro interpretaci očních pohybů při čtení statických map</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/eye-solid.png" type="image/png">
+	</head>
+	<body class="is-preload">
+
+		<section id="header">
+    <header>
+        
+        <h1 id="logo"><a href="#">Bakalářská práce</a></h1>
+        <p>František Brandejs <br />
+        Katedra geoinformatiky, PřF UPOL <br />
+        Olomouc, 2026 </p>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#uvod" class="active">Úvod a Cíle</a></li>
+            <li><a href="#metody">Použité metody</a></li>
+            <li><a href="#vysledky">Dosažené výsledky</a></li>
+            <li><a href="#zaver">Závěr a přínos</a></li>
+            <li><a href="#english-annotation">English annotation</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <ul class="icons">
+            <li><a href="pdf/text_placeholder.pdf" class="button primary icon solid fa-download" target="_blank">Text práce</a></li>
+            <li><a href="pdf/poster.pdf" class="button primary icon solid fa-download" target="_blank">Poster</a></li>			
+        </ul>
+        <p class="copyright">&copy; 2026 František BRANDEJS <br/> Šablona: <a href="http://html5up.net">HTML5 UP</a></p>
+    </footer>
+</section>
+
+<div id="wrapper">
+    <div id="main">
+
+        <section id="uvod">
+            <div class="container">
+                <header class="major">
+                    <h2>Využití Rekurentní kvantifikační analýzy pro interpretaci očních pohybů při čtení statických map</h2>
+                    <h3>Use of Recurrence Quantification Analysis for Interpreting Eye Movements While Reading Static Maps</h3>
+                    <h4>
+                        Autor/Author: František Brandejs <br/>
+                        Vedoucí práce/Supervisor: Mgr. Michaela Vojtěchovská
+                    </h4>
+                </header>
+                <p>Porozumění tomu, jak člověk vnímá a interpretuje vizuální informace v mapách, je klíčovým úkolem kognitivní kartografie. Tradiční lineární metriky eye-trackingu nemusí zachytit skryté kognitivní strategie. Tato bakalářská práce proto zkoumá využití <strong>Rekurentní kvantifikační analýzy (RQA)</strong>, která má potenciál pro detailnější porozumění procesu map-use.</p>
+                
+                <h3>Hlavní cíle práce:</h3>
+                <ul class="feature-icons">
+                    <li class="icon solid fa-eye">Porovnat metriky RQA ve třech dílčích scénářích (experti vs. nováčci, legenda vs. mapové pole, vývoj metrik počas experimentu).</li>
+                    <li class="icon solid fa-laptop-code">Vytvořit interaktivní open-source nástroj v prostředí Google Colab pro výpočet RQA.</li>
+                    <li class="icon solid fa-check">Zhodnotit využitelnost metodiky RQA v kontextu eye-trackingu a čtení map.</li>
+                    <li class="icon solid fa-chart-line">Navrhnout doporučení pro budoucí výzkumníky k budoucí aplikaci RQA v kognitivní kartografii.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="metody">
+            <div class="container">
+                <h3>Použité metody a data</h3>
+                <p>Pro analýzu byla využita již naměřená eye-tracking data z experimentu hodnocení barevných stupnic <a href="https://www.geoinformatics.upol.cz/dprace/magisterske/vitkova24/" target="_blank">(Vítková, 2024)</a>. Úkolem respondentů bylo přiřadit správný interval v legendě k odstínu v mapě.</p>
+                
+                <div class="features">
+                    <article>
+                        <a href="#" class="image"><img src="images/google-colab-for-python.png" alt="" /></a>
+                        <div class="inner">
+                            <h4>Výpočetní rámec v Pythonu</h4>
+                            <p>Celý analytický postup byl naprogramován v <strong>Google Colab</strong>. Nástroj automaticky filtruje outliery (pomocí IQR), počítá foveální rádius pro zorný úhel na monitoru a generuje grafické výstupy. Nástroj je navržen s uživatelským rozhraním tak, aby jej mohli používat i neprogramátoři.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/metrics.avif" alt="" /></a>
+                        <div class="inner">
+                            <h4>Metriky RQA</h4>
+                            <p>Práce využívá tři stěžejní nelineární metriky:<br/>
+                            <strong>Determinismus (DET)</strong>: Ukazuje míru systematičnosti a opakujících se sekvencí.<br/>
+                            <strong>Laminarita (LAM)</strong>: Indikuje stabilitu pohledu a lokální kognitivní zátěž.<br/>
+                            <strong>Recurrence Rate (RR)</strong>: Hodnotí celkovou míru návratnosti pohledu do stejných míst.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="vysledky">
+            <div class="container">
+                <h3>Dosažené výsledky</h3>
+                <p>Analýza byla provedena ve třech hlavních a dvou doplňkových scénářích. Ukázalo se, že volba výpočetního přístupu (AOI vs. XY) má na výsledky značný vliv. Z analýzy vyplynulo, že metrický <strong>XY přístup je objektivnější</strong>, neboť na rozdíl od AOI přístupu nenadhodnocuje velké plochy mapového pole a respektuje fyzikální limity lidského zraku.</p>
+                
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <h4>Experti vs. Nováčci</h4>
+                        <p>Překvapivým zjištěním bylo, že globální profily expertů a nováčků se statisticky významně nelišily. Charakter úkolu experimentu si u obou skupin vynutil z hlediska metrik prakticky identický, rigidní algoritmus čtení, který nedal prostor pro projevení expertních strategií.</p>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <h4>Časová dynamika (Running RQA)</h4>
+                        <p>Sledování vývoje metrik v čase (pomocí Heatmap Stripů a Worm Plotů) bylo největším přínosem. Úspěšně se podařilo lokalizovat tzv. <em>fázové přechody</em> (aha-momenty) – okamžiky, kdy uživatel přechází od chaotické orientace k systematické strategii (strmý nárůst determinismu).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="zaver">
+            <div class="container">
+                <h3>Závěr a přínos práce</h3>
+                <p>Bakalářská práce potvrdila, že RQA je potenciálně silným nástrojem pro pochopení interakce mezi člověkem a mapou, nicméně vyžaduje podstatná metodologická pravidla a správnou interpretaci (filtrace outlierů, specifický design experimentu).</p>
+                <p><strong>Cenným přínosem</strong> je sestavený, volně dostupný open-source skript v prostředí Google Colab. Tento rámec překonává technickou bariéru nelineární dynamiky a nabízí částečné řešení pro budoucí eye-trackingové experimenty v kartografii.</p>
+            </div>
+        </section>
+        
+        <section id="english-annotation">
+            <div class="container">
+                <h3>English Annotation</h3>
+                <p>This bachelor’s thesis focuses on analyzing users’ cognitive strategies when interpreting static cartographic works using eye-tracking data. For this analysis, an advanced nonlinear method called Recurrent Quantification Analysis (RQA) was used, which, unlike traditional linear metrics, allows for the detection of hidden dynamic structures and systematic patterns in fixation sequences. To fulfill the thesis assignment, previously collected data from the experiment in the master’s thesis User Testing of Color Scales in Cartography (Vítková 2024) was used. The data are analyzed in three scenarios using RQA metrics, specifically Recurrence Rate, Determinism, and Laminarity. Based on the results, the author critically assesses the applicability of RQA in cartography and, based on the findings, recommends an approach for the most suitable application of RQA in cartography. 
+                    The result of this work is a computational and methodological foundation for the application of RQA in cartographic research. The work demonstrates the ability of these metrics to detect differences in the visual strategies of individual users in the map-use process.
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+        
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+>>>>>>> 488d13c59d53b659173170ce0cb71850315ed27f
 </html>
